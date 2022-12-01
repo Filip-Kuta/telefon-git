@@ -1,0 +1,200 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: var(--transition-duration) var(--cubic-bezier);
+  opacity: var(--transition-duration) var(--cubic-bezier);
+  visibility: var(--transition-duration) var(--cubic-bezier);
+  &__card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: var(--tertiary-color);
+    width: 100%;
+    max-width: 450px;
+    @media screen and (min-width: $laptop) {
+      max-width: 528px;
+    }
+  }
+  &__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--tertiary-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+  &__header {
+    margin: 0;
+  }
+  &__item {
+    display: flex;
+    position: relative;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-block: 0;
+
+    margin-block: 28px;
+    align-items: center;
+    transition: var(--transition-duration) var(--cubic-bezier);
+    margin-top: 30px;
+    &:has(input:focus) {
+      border-color: rgba(33, 150, 243, 1);
+    }
+    &:has(input:focus) .backdrop__icon {
+      fill: rgba(33, 150, 243, 1);
+    }
+    &:has(textarea:focus) {
+      border-color: var(--praimary-color);
+    }
+    @media screen and (min-width: $laptop) {
+      width: 448px;
+    }
+  }
+  &__item--mariginbottom {
+    margin-bottom: 20px;
+  }
+  &__list {
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--fifthary-color);
+  }
+  &__icon {
+    width: 18px;
+    height: 18px;
+    margin: 11px 12px 11px 12px;
+  }
+  &__input {
+    border: none;
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__modal-text {
+    border: none;
+    height: 120px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__checkbox {
+    margin: 0;
+  }
+  &__checkbox-label {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+  }
+  &__checkbox-modal {
+    opacity: 0;
+    position: absolute;
+    left: -1px;
+    top: 0px;
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+  }
+  &__checkbox-span {
+    position: relative;
+    border: 2px solid var(--sixthary-color);
+    width: 19px;
+    height: 15px;
+    display: block;
+    top: 2px;
+    left: 10px;
+    border-radius: 4px;
+    z-index: -1;
+
+    @media screen and (min-width: $laptop) {
+      width: 16px;
+      top: 2px;
+      left: -6px;
+    }
+  }
+  &__checkbox-svg {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    left: -2px;
+    top: -2px;
+    border-radius: 4px;
+    z-index: -1;
+    fill: transparent;
+  }
+  &__text {
+    color: rgba(33, 150, 243, 1);
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    margin-inline: auto;
+    background-color: var(--praimary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition-duration) var(--cubic-bezier);
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--tertiary-color);
+    &:hover {
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+      box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(100%);
+}
+
+.backdrop__checkbox-label
+  input:checked
+  ~ .backdrop__checkbox-span
+  .backdrop__checkbox-svg {
+  border: none;
+  fill: var(--tertiary-color);
+  background-color: var(--praimary-color);
+}

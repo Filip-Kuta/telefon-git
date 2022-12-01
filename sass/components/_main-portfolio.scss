@@ -1,0 +1,112 @@
+.main-portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    width: 100%;
+    @media screen and (min-width: $laptop) {
+      margin-top: 174px;
+    }
+  }
+  &__button {
+    background-color: var(--fourthary-color);
+    color: var(--sixthary-color);
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border: none;
+    width: 133px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      background-color: var(--praimary-color);
+      color: var(--tertiary-color);
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+      box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.main-icon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 34px;
+  margin-bottom: 94px;
+  width: 100%;
+
+  &__bagraund {
+    border-style: solid;
+    border-color: rgba(238, 238, 238, 1);
+    border-width: 1px;
+    box-sizing: border-box;
+    &:hover .main-icon__overlay {
+      transform: translateY(0);
+    }
+    &:hover {
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+      box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+  &__box {
+    position: relative;
+    overflow: hidden;
+  }
+  &__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: translateY(141%);
+    background: rgba(33, 150, 243, 0.9);
+    transition: var(--transition-duration) var(--cubic-bezier);
+  }
+  &__text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 1);
+    margin: 49px 45px 49px 24px;
+    box-shadow: none !important;
+    text-align: left;
+  }
+  &--size {
+    margin: 0;
+  }
+  &__pictures {
+    box-shadow: none;
+  }
+  &__figcaption {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 18px;
+    line-height: 2;
+    margin: 0 auto;
+    &--top {
+      padding: 20px 24px 4px 24px;
+      color: #212121;
+      font-weight: 700;
+    }
+    &--bottom {
+      color: var(--fifthary-color);
+      padding: 0 24px 20px 24px;
+      font-weight: 400;
+    }
+  }
+}

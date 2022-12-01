@@ -1,0 +1,103 @@
+.mobail-menu {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  padding: 48px 40px;
+  overflow: scroll;
+
+  &__button {
+    position: absolute;
+    top: 10px;
+    left: 440px;
+    background-color: initial;
+    font-weight: 600;
+    font-size: 25px;
+    border: none;
+  }
+
+  &__list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    &--font {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 47px;
+      letter-spacing: 0.02em;
+      color: #212121;
+      text-decoration: none;
+      &:hover {
+        color: rgba(33, 150, 243, 1);
+      }
+    }
+  }
+  &__contact {
+    margin-top: 200px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    &--tel {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+      color: #757575;
+      text-decoration: none;
+      &:hover {
+        color: rgba(33, 150, 243, 1);
+      }
+    }
+    &--mail {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: #757575;
+      &:hover {
+        color: rgba(33, 150, 243, 1);
+      }
+    }
+  }
+  .mobail-menu__socialmedia {
+    margin-top: 64px;
+    margin-bottom: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    &--decoration {
+      text-decoration: none;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #2196f3;
+      padding-right: 10px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    &--Linkelin {
+      text-decoration: none;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #2196f3;
+    }
+  }
+}

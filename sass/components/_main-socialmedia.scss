@@ -1,0 +1,21 @@
+.socialmedia-list {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  &__svg {
+    width: 44px;
+    height: 44px;
+    transition: fill var(--transition-duration) var(--cubic-bezier);
+    background-color: var(--transition-duration) var(--cubic-bezier);
+    border-radius: 50%;
+  }
+  &__color {
+    fill: var(--seventhary-color);
+    &:hover svg {
+      fill: var(--tertiary-color);
+      background-color: var(--praimary-color);
+      border-radius: 50%;
+    }
+  }
+}

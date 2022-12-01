@@ -1,0 +1,79 @@
+.work-section {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+  &__heading {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding: 0 auto;
+    margin: 0;
+  }
+  &__pictures {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 94px;
+  }
+  &__application {
+    position: relative;
+  }
+  &__text {
+    position: absolute;
+    top: 224px;
+    color: var(--tertiary-color);
+  }
+  &__text--ferst {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 27px 90px 27px 90px;
+    background: var(--work-section-bacground);
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+  &__text--second {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 27px 113px 27px 113px;
+    background: var(--work-section-bacground);
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+  &__text--third {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 27px 96px 27px 95px;
+    background: var(--work-section-bacground);
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+}
